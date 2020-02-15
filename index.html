@@ -3,8 +3,12 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Peep | Coming Soon</title>
-        <link rel="shortcut icon" href="image/Logo.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="image/Logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="leaflet.css"/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
     </head>
     <body>
         <main>
@@ -22,12 +26,16 @@
             </div>
             <div class="container">
                 <article>
-                    <section>
-                        <div class="centerAlign">
+                    <section id="banner">
+                        <div class="bannerText">
                             <span id="title">Peep</span>
                             <br>
                             <span id="message">Coming Soon</span>
                         </div>
+                    </section>
+                    
+                    <section id="eventsMap">
+                        <div id="mapid"></div>
                     </section>
                 </article>
             </div>
