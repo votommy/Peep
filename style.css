@@ -1,0 +1,139 @@
+html, body {
+    font: 16px "Avenir", sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    height: auto;
+    padding: 1rem;
+    background-color: #00AEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerElement {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.headerElement:first-child {
+    justify-content: flex-start;
+}
+.headerElement:nth-child(2) {
+    justify-content: center;
+}
+.headerElement:last-child {
+    justify-content: flex-end;
+}
+
+#profPic {
+    height: 2.5rem;
+    border-radius: 50%;
+}
+#logo {
+    height: 2.5rem;
+}
+#logo:hover {
+    transform: scale(1.05);
+}
+#createEventBTN {
+    font-size: 80%;
+    padding: 0.7rem;
+    border-radius: 1.4rem;
+    background-color: white;
+    border: none;
+    color: #00AEFF;
+}
+#createEventBTN:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/*Hamburger Menu*/
+#hamburgerMenu {
+    float: right;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+}
+#hamburgerMenu:hover {
+    cursor: pointer;
+}
+#hamburgerMenu span { /*all of the lines*/
+    display: block;
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+}
+#topBun, #patty, #bottomBun { /*the hamburger lines*/
+    background-color: #00AEFF;
+    transition: 0.2s;
+}
+#topX, #bottomX { /*the X button lines*/
+    background-color: transparent;
+    transition: 0.6s;
+}
+/*line positions*/
+#topBun {
+    top: 0rem;
+}
+#topX {
+    top: 0.5rem;
+}
+#patty {
+    top: 1rem;
+}
+#bottomX {
+    top: 1.5rem;
+}
+#bottomBun {
+    top: 2rem;
+}
+/*onclick of hamburgerMenu button*/
+#hamburgerMenu.xBTN #topBun, #hamburgerMenu.xBTN #patty, #hamburgerMenu.xBTN #bottomBun {
+    background-color: transparent;
+    transition: 0.2s;
+}
+#hamburgerMenu.xBTN #topX, #hamburgerMenu.xBTN #bottomX {
+    background-color: #00AEFF;
+    transition: 0.5s;
+    top: 1.25rem;
+}
+#hamburgerMenu.xBTN #topX {
+    transform:rotate(45deg);
+}
+#hamburgerMenu.xBTN #bottomX {
+    transform:rotate(-45deg);
+}
+/*End Hamburger Menu*/
+
+section {
+    background: #CCCCCC url("image/CityScapeBG.jpg") bottom center/cover no-repeat;
+    height: 500px;
+    position: relative;
+}
+section .centerAlign {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+
+#title {
+    font-size: 4rem;
+}
+#message {
+    font-size: 2.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
