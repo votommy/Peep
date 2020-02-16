@@ -17,28 +17,42 @@
                 <span class="headerElement"><a href="index.html"><img id="logo" src="image/WhiteLogo.png" /></a></span>
                 <span class="headerElement"><button id="createEventBTN">&plus; new event</button></span>
             </header>
-            <div id="hamburgerMenu" onclick="transformHamburger()">
-                <span id="topBun"></span>
-                <span id="topX"></span>
-                <span id="patty"></span>
-                <span id="bottomX"></span>
-                <span id="bottomBun"></span>
+            
+            <div id="menu">
+                <div id="hamburgerMenu" onclick="transformHamburger()">
+                    <span id="topBun"></span>
+                    <span id="topX"></span>
+                    <span id="patty"></span>
+                    <span id="bottomX"></span>
+                    <span id="bottomBun"></span>
+                </div>
+                <div id="navList">
+                    <a onclick="hideNavList()" href="#eventsMap">Events Map</a><br>
+                    <a onclick="hideNavList()" href="#eventsList">Events List</a><br>
+                    <a onclick="hideNavList()" href="#contact">Contact Us</a>
+                </div>
             </div>
-            <div class="container">
-                <article>
-                    <section id="banner">
-                        <div class="bannerText">
-                            <span id="title">Peep</span>
-                            <br>
-                            <span id="message">Coming Soon</span>
-                        </div>
-                    </section>
-                    
+            
+            <article>
+                <section id="banner">
+                    <div class="bannerText">
+                        <span id="title">Peep</span>
+                        <br>
+                        <span id="message">Coming Soon</span>
+                    </div>
+                </section>
+                
+                <div class="container">
                     <section id="eventsMap">
+                        <h2>Events Map</h2>
                         <div id="mapid"></div>
                     </section>
-                </article>
-            </div>
+                
+                    <section id="eventsList">
+                        <h2>Events List</h2>
+                    </section>
+                </div>
+            </article>
         </main>
         <footer>
             <span id="copyrightInfo"></span>
