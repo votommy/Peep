@@ -1,5 +1,6 @@
 :root {
-  --peepBlue: #00AEFF;
+    --peepBlue: #00AEFF;
+    --peepDark: #262F34;
 }
 
 html, body {
@@ -13,6 +14,13 @@ html, body {
     margin: 0 10%;
 }
 
+#eventsMap, #eventsList, #aboutUs {
+    display: block;
+    position: relative;
+    top: -4.875rem;
+    visibility: hidden;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -22,6 +30,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 101;
 }
 .headerElement {
   flex: 1;
@@ -43,6 +52,10 @@ header {
 #profPic {
     height: 2.5rem;
     border-radius: 50%;
+}
+#profPic:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 #logo {
     height: 2.5rem;
@@ -71,7 +84,7 @@ header {
     position: fixed;
     right: 0;
     top: 5rem;
-    z-index: 101;
+    z-index: 102;
 }
 #hamburgerMenu:hover {
     cursor: pointer;
@@ -125,17 +138,18 @@ header {
 /*End Hamburger Menu*/
 
 #navList {
-    display: none;
+    display: block;
     z-index: 101;
     position: fixed;
-    top: 8.75rem;
-    right: 1rem;
+    top: 4.875rem; /*height of header bar*/
+    right: -50vw;
+    transition: 0.2s;
 }
 #navList a {
     color: white;
     text-decoration: none;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
 }
 #navList a:visited {
     color: white;
@@ -146,11 +160,10 @@ header {
     text-decoration: none;
 }
 #navList.navListVisible {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(-50vw);
+    background-color: var(--peepDark);
     width: auto;
-    padding: 2rem;
-    border-radius: 24px 0;
+    padding: 4.5rem 2rem 2rem 2rem;
 }
 
 #banner {
@@ -168,6 +181,14 @@ header {
     font-weight: 100;
     text-align: center;
 }
+#downArrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 1rem;
+    margin-top: 1rem;
+    transform: rotate(45deg);
+}
 
 #title {
     font-size: 5rem;
@@ -180,12 +201,32 @@ header {
     height: 60vh;
     width: 90%;
     margin: 0 auto;
-    border-radius: 2vh;
+    border-radius: 1rem;
+}
+
+#cardListView {
+    overflow: auto;
+    white-space: nowrap;
+}
+.eventCard {
+    display: inline-block;
+    width: 300px;
+    height: 25vh;
+    border: 1px gray solid;
+    border-radius: 1rem;
+    padding: 2px 16px;
+    margin: 0 1rem 2rem 1rem;
+}
+.eventCard:hover {
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1);
+}
+.eventCard p {
+    word-break: break-word;
 }
 
 footer {
-    color: gray;
+    color: white;
     text-align: center;
     padding: 1rem;
-    border-top: 1px gray dashed;
+    background-color: var(--peepBlue);
 }
