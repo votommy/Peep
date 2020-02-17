@@ -37,6 +37,7 @@ header {
   display: flex;
   justify-content: center;
 }
+/*
 .headerElement:first-child {
     justify-content: flex-start;
     margin-left: 1rem;
@@ -48,6 +49,7 @@ header {
     justify-content: flex-end;
     margin-right: 1rem;
 }
+*/
 
 #profPic {
     height: 2.5rem;
@@ -176,7 +178,7 @@ header {
 }
 #banner .bannerText {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -230,5 +232,5 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    background-color: var(--peepBlue);
+    background-color: var(--peepDark);
 }
