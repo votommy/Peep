@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 101;
+    z-index: 102;
 }
 .headerElement {
   flex: 1;
@@ -139,10 +139,11 @@ header {
 
 #navList {
     display: block;
+    visibility: hidden;
     z-index: 101;
     position: fixed;
-    top: 4.875rem; /*height of header bar*/
-    right: -50vw;
+    top: 0; /*height of header bar*/
+    right: -5rem;
     transition: 0.2s;
 }
 #navList a {
@@ -160,10 +161,11 @@ header {
     text-decoration: none;
 }
 #navList.navListVisible {
-    transform: translateX(-50vw);
+    visibility: visible;
+    transform: translateX(-5rem);
     background-color: var(--peepDark);
     width: auto;
-    padding: 4.5rem 2rem 2rem 2rem;
+    padding: 9.375rem 2rem 2rem 2rem;
 }
 
 #banner {
