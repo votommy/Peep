@@ -1,0 +1,202 @@
+:root {
+    --peepBlue: #00AEFF;
+    --peepDark: #262F34;
+}
+
+html, body {
+    font: 16px "Avenir", sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    margin: 0 10%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+    background-color: var(--peepBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 102;
+}
+.headerElement {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.headerElement:first-child {
+    justify-content: flex-start;
+    margin-left: 1rem;
+}
+.headerElement:nth-child(2) {
+    justify-content: center;
+}
+.headerElement:last-child {
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+#profPic {
+    height: 2.5rem;
+    border-radius: 50%;
+}
+#profPic:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#logo {
+    height: 2.5rem;
+}
+#logo:hover {
+    transform: scale(1.05);
+}
+#createEventBTN {
+    font-size: 80%;
+    padding: 0.7rem;
+    border-radius: 1.4rem;
+    background-color: white;
+    border: none;
+    color: var(--peepBlue);
+}
+#createEventBTN:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/*Hamburger Menu*/
+#hamburgerMenu {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
+    position: fixed;
+    right: 0;
+    top: 4rem;
+    z-index: 102;
+}
+#hamburgerMenu:hover {
+    cursor: pointer;
+}
+#hamburgerMenu span { /*all of the lines*/
+    display: block;
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+}
+#topBun, #patty, #bottomBun { /*the hamburger lines*/
+    background-color: var(--peepBlue);
+    transition: 0.2s;
+}
+#topX, #bottomX { /*the X button lines*/
+    background-color: transparent;
+    transition: 0.2s;
+}
+/*line positions*/
+#topBun {
+    top: 0rem;
+}
+#topX {
+    top: 0.5rem;
+}
+#patty {
+    top: 1rem;
+}
+#bottomX {
+    top: 1.5rem;
+}
+#bottomBun {
+    top: 2rem;
+}
+/*onclick of hamburgerMenu button*/
+#hamburgerMenu.xBTN #topBun, #hamburgerMenu.xBTN #patty, #hamburgerMenu.xBTN #bottomBun {
+    background-color: transparent;
+    transition: 0.2s;
+}
+#hamburgerMenu.xBTN #topX, #hamburgerMenu.xBTN #bottomX {
+    background-color: var(--peepBlue);
+    transition: 0.2s;
+    top: 1.25rem;
+}
+#hamburgerMenu.xBTN #topX {
+    transform:rotate(45deg);
+}
+#hamburgerMenu.xBTN #bottomX {
+    transform:rotate(-45deg);
+}
+/*End Hamburger Menu*/
+
+#navList {
+    display: block;
+    visibility: hidden;
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    right: -5rem;
+    transition: 0.2s;
+}
+#navList a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1.15rem;
+}
+#navList a:visited {
+    color: white;
+    text-decoration: none;
+}
+#navList a:hover {
+    color: black;
+    text-decoration: none;
+}
+#navList.navListVisible {
+    visibility: visible;
+    transform: translateX(-5rem);
+    background-color: var(--peepDark);
+    width: auto;
+    padding: 8.5rem 2rem 2rem 2rem;
+}
+
+#banner {
+    z-index: -1;
+    position: relative;
+}
+
+#aboutUs {
+    margin-top: 5rem;
+}
+
+#chatBox {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    background-color: var(--peepDark);
+    display: flex;
+    z-index: 102;
+    border-radius: 0.5rem 0.5rem 0 0 ;
+}
+#chatBox:hover {
+    cursor: pointer;
+}
+#chatBox span {
+    align-self: center;
+    margin: 0.75rem 2rem 0.75rem 1rem;
+    color: white;
+}
+#messagesPic {
+    height: 2rem;
+    align-self: center;
+    margin: 0 0 0 1rem;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--peepBlue);
+}

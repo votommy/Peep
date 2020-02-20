@@ -53,7 +53,7 @@ const fireStationTour = L.marker([39.102596, -94.562545], {icon: peepMarker}).ad
 fireStationTour.bindPopup("<b>Fire Station Tour</b><br>Wednesday, 10:30am - 12:00pm").openPopup();
 
 // For getting coordinates
-function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
-}
-mymap.on('click', onMapClick);
+//function onMapClick(e) {
+//    alert("You clicked the map at " + e.latlng);
+//}
+//mymap.on('click', onMapClick);
