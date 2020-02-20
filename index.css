@@ -14,7 +14,7 @@ html, body {
     margin: 0 10%;
 }
 
-#eventsMap, #eventsList, #aboutUs {
+#eventsMap, #eventsList {
     display: block;
     position: relative;
     top: -4.875rem;
@@ -198,6 +198,15 @@ header {
 }
 #message {
     font-size: 3rem;
+}
+
+#searchBar {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 1px #BBB solid;
+    color: #CCC;
 }
 
 #mapid {
