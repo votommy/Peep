@@ -243,7 +243,7 @@ header {
 #chatBox {
     position: fixed;
     bottom: 0;
-    right: 5%;
+    right: 1%;
     background-color: var(--peepDark);
     display: flex;
     z-index: 102;
