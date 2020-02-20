@@ -49,8 +49,11 @@ sandwichShop.bindPopup("<b>Free sandwiches!</b><br>Today! 2pm - 3:30pm").openPop
 const charityBasketball = L.marker([39.086162, -94.577597], {icon: peepMarker}).addTo(mymap);
 charityBasketball.bindPopup("<b>Basketball game for charity</b><br>Tomorrow, 10am - 11:30am").openPopup();
 
+const fireStationTour = L.marker([39.102596, -94.562545], {icon: peepMarker}).addTo(mymap);
+fireStationTour.bindPopup("<b>Fire Station Tour</b><br>Wednesday, 10:30am - 12:00pm").openPopup();
+
 // For getting coordinates
-//function onMapClick(e) {
-//    alert("You clicked the map at " + e.latlng);
-//}
-//mymap.on('click', onMapClick);
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+mymap.on('click', onMapClick);

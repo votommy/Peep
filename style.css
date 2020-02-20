@@ -25,7 +25,7 @@ header {
     position: fixed;
     width: 100%;
     height: auto;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     background-color: var(--peepBlue);
     display: flex;
     justify-content: center;
@@ -83,7 +83,7 @@ header {
     margin: 1rem;
     position: fixed;
     right: 0;
-    top: 5rem;
+    top: 4rem;
     z-index: 102;
 }
 #hamburgerMenu:hover {
@@ -101,7 +101,7 @@ header {
 }
 #topX, #bottomX { /*the X button lines*/
     background-color: transparent;
-    transition: 0.6s;
+    transition: 0.2s;
 }
 /*line positions*/
 #topBun {
@@ -126,7 +126,7 @@ header {
 }
 #hamburgerMenu.xBTN #topX, #hamburgerMenu.xBTN #bottomX {
     background-color: var(--peepBlue);
-    transition: 0.5s;
+    transition: 0.2s;
     top: 1.25rem;
 }
 #hamburgerMenu.xBTN #topX {
@@ -142,7 +142,7 @@ header {
     visibility: hidden;
     z-index: 101;
     position: fixed;
-    top: 0; /*height of header bar*/
+    top: 0;
     right: -5rem;
     transition: 0.2s;
 }
@@ -165,7 +165,7 @@ header {
     transform: translateX(-5rem);
     background-color: var(--peepDark);
     width: auto;
-    padding: 9.375rem 2rem 2rem 2rem;
+    padding: 8.5rem 2rem 2rem 2rem;
 }
 
 #banner {
@@ -207,23 +207,50 @@ header {
 }
 
 #cardListView {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden; /*Prevent verticle scrolling*/
     white-space: nowrap;
 }
 .eventCard {
     display: inline-block;
     width: 300px;
     height: 25vh;
+    vertical-align: top;
     border: 1px gray solid;
     border-radius: 1rem;
     padding: 2px 16px;
     margin: 0 1rem 2rem 1rem;
+    white-space: normal;
 }
 .eventCard:hover {
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1);
 }
 .eventCard p {
     word-break: break-word;
+    flex-wrap: wrap;
+}
+
+#chatBox {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    background-color: var(--peepDark);
+    display: flex;
+    z-index: 102;
+    border-radius: 0.5rem 0.5rem 0 0 ;
+}
+#chatBox:hover {
+    cursor: pointer;
+}
+#chatBox span {
+    align-self: center;
+    margin: 0.75rem 2rem 0.75rem 1rem;
+    color: white;
+}
+#messagesPic {
+    height: 2rem;
+    align-self: center;
+    margin: 0 0 0 1rem;
 }
 
 footer {
