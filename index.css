@@ -183,6 +183,7 @@ header {
     color: white;
     font-weight: 100;
     text-align: center;
+    width: 80%;
 }
 #downArrow {
     border: solid white;

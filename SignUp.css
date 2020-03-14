@@ -1,0 +1,98 @@
+:root {
+    --peepBlue: #00AEFF;
+    --peepDark: #262F34;
+}
+
+html, body {
+    font: 16px "Avenir", sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    margin: 0 10%;
+}
+
+#banner {
+    z-index: -1;
+    background: #CCCCCC url("image/CityScapeBG.jpg") bottom center/cover no-repeat;
+    height: 100vh;
+/*    position: relative;*/
+}
+
+#logo {
+    height: 5rem;
+}
+
+.bannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    width: 80%;
+}
+
+.textBox {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem 0 0 1rem;
+    border: 1px solid grey;
+    width: 40%;
+}
+
+#button {
+    font-size: 1rem !important;
+    padding: 0.5rem;
+    border-radius: 0 1rem 1rem 0;
+    border-width: 1px 1px 1px 0;
+    border-color: grey;
+    border-style: solid;
+}
+#button:hover {
+    background-color: #DDD;
+    cursor: pointer;
+}
+
+#downArrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 1rem;
+    margin-top: 1rem;
+    transform: rotate(45deg);
+}
+
+#title {
+    font-size: 5rem;
+}
+#message {
+    font-size: 2rem;
+}
+
+#eventsList {
+    padding: 2px 1rem;
+}
+
+#cardListView {
+    overflow-x: auto;
+    overflow-y: hidden; /*Prevent verticle scrolling*/
+    white-space: nowrap;
+}
+#cardListView > img {
+    display: inline-block;
+    height: 60vh;
+    vertical-align: top;
+    margin: 0 1rem 2rem 1rem;
+    white-space: normal;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--peepBlue);
+}
