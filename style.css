@@ -1,0 +1,52 @@
+:root {
+    --peepBlue: #00AEFF;
+    --peepDark: #262F34;
+}
+
+html, body {
+    font: 16px "Avenir", sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#logo {
+    height: 3rem;
+}
+
+#banner {
+    z-index: -1;
+    background: #CCCCCC url("image/CityScapeBG.jpg") bottom center/cover no-repeat;
+    height: 100vh;
+/*    position: relative;*/
+}
+#banner .bannerText {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+
+#title {
+    font-size: 5rem;
+}
+#message {
+    font-size: 3rem;
+}
+
+.link {
+    color: white;
+}
+.link:visited {
+    color: white;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--peepDark);
+}

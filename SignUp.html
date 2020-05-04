@@ -2,27 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Peep</title>
+        <title>Peep | Sign Up</title>
         <link rel="shortcut icon" href="image/Logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="SignUp.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <main>
             <article>
                 <section id="banner">
                     <div class="bannerText">
-                        <img id="logo" src="image/WhiteLogo.png" alt="Peep's official logo" />
+                        <a href="index.html"><img id="logo" src="image/WhiteLogo.png" alt="Peep's official logo." /></a>
                         <br><br>
                         <span id="message">Be the first to know when Peep is available.</span>
                         <br>
-                        <input class="textBox" type="text" placeholder="email address"><input id="button" type="button" value="Submit" />
+                        <form action="insertEmail.php" method="POST">
+                            <input class="textBox" type="text" placeholder="email address" name="emailAddress" /><input id="button" type="submit" value="Submit">
+                        </form>
                         <br>
-                        <span id="downArrow"></span>
+                        <a href="#aboutUs"><span id="downArrow"></span></a>
                     </div>
                 </section>
                 
                 <div class="container">
-                    <section><a id="eventsList"></a>
+                    <section id="aboutUs">
+                        <h2>What is Peep?</h2>
+                        <p>
+                            Peep allows users to browse, create, and promote events while at the same time making it a functional site for social interaction. We believe that great stories and memories are made through communal and societal interaction.
+                            <br>
+                            Bringing ideas to life is our purpose as a company. We help you coordinate and create these ideas and turn them into events and opportunities to connect and spend time with friends and family. We aim to connect people and places.
+                        </p>
+                    </section>
+                    <hr>
+                    <section id="eventsList">
                         <div id="cardListView">
                             <img src="image/screenshots/profile.jpg" alt="Screenshot of the profile page of Peep's mobile app." />
                             <img src="image/screenshots/eventPage.jpg" alt="Screenshot of the events page of Peep's mobile app." />
@@ -32,15 +44,46 @@
                             <img src="image/screenshots/chat.jpg" alt="Screenshot of the contacts page of Peep's mobile app." />
                         </div>
                     </section>
+                    <hr>
+                    <section>
+                        <h2>Interested in Peep?</h2>
+                        <h3>Be the first to know when it is publically available.</h3>
+                        <form action="insertEmail.php" method="POST">
+                            <input class="textBox" type="text" placeholder="email address" name="emailAddress" /><input id="button" type="submit" value="Submit">
+                        </form>
+                    </section>
                 </div>
             </article>
         </main>
-        <footer>
+        <footer style="margin-top: 2rem;">
             <span id="copyrightInfo"></span>
         </footer>
         
         <script>
             document.getElementById("copyrightInfo").innerHTML = "&copy; " + new Date().getFullYear() + " Peep. All rights reserved";
+
+            $(document).ready(function(){
+                // Add smooth scrolling to all links
+                $("a").on('click', function(event) {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        const hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        $('html, body').animate({
+                          scrollTop: $(hash).offset().top
+                        }, 700, function(){
+
+                          // Add hash (#) to URL when done scrolling (default click behavior)
+                          window.location.hash = hash;
+                        });
+                    }
+                });
+            });
         </script>
     </body>
 </html>
