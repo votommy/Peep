@@ -5,5 +5,5 @@ Bringing ideas to life is our purpose as a company. We help you coordinate and c
 ## About the program:
 This project is a sample website written in pure HTML with no help from template frameworks such as Bootstrap.
 
-[Github Repository](https://github.com/votommy/Peep/)
-[Website Link](https://votommy.github.io/Peep/index.html)
+[Github Repository](https://github.com/votommy/Peep/)  
+[Website](https://votommy.github.io/Peep/index.html)
